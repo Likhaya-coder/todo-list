@@ -1,0 +1,12 @@
+.button {
+    padding: 20px 30px;
+    background-color: rgb(38, 160, 38);
+    border-radius: 5px;
+    margin-top: 20px;
+    border: none;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+    color: wheat;
+    cursor: pointer;
+}

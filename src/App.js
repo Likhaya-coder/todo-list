@@ -8,7 +8,7 @@ function App() {
 
   const addTodoHandler = todo => {
     setUserItem(prevState => {
-      return [prevState, {input: todo, id: Math.random().toString()}];
+      return [...prevState, {input: todo, id: Math.random().toString()}];
     });
   }
 
@@ -16,7 +16,7 @@ function App() {
     <Fragment>
       <Header />
       <UserInput onAddTodo={addTodoHandler}/>
-      <TodoList userItems={userItems}/>
+      <TodoList userItec={userItems}/>
     </Fragment>
   );
 }

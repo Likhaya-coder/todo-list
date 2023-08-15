@@ -1,7 +1,8 @@
 import {useState} from 'react';
 import Input from '../UI/Input';
-import SuccessButton from '../UI/SuccessButton';
+import Buttons from '../UI/Buttons';
 import classes from './UserInput.module.css';
+import successBtn from '../UI/Buttons.module.css';
 
 const UserInput = props => {
     const [todo, setTodo] = useState();
@@ -19,7 +20,7 @@ const UserInput = props => {
     return ( 
         <form onSubmit={todoHandler} className={classes.form}>
             <Input type="text" placeholder="add item..." onChange={todoChangeHandler}/>
-            <SuccessButton type="submit">Add item</SuccessButton>
+            <Buttons type="submit" className={successBtn['success-button']}>Add item</Buttons>
         </form>
      );
 }

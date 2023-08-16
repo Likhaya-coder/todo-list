@@ -37,8 +37,8 @@ const UserInput = props => {
         <Card>
             {error && <Modal onClose={modalCloseHandler} title={error.title} message={error.message}/>}
             <form onSubmit={submitHandler}>
-                <Input value={todo} type="text" placeholder="add item..." onChange={todoChangeHandler}/>
-                <Buttons type="submit" className={successBtn['success-button']}>Add item</Buttons>
+                <Input value={todo} type="text" placeholder="add task..." onChange={todoChangeHandler}/>
+                <Buttons type="submit" className={successBtn['success-button']}>Add</Buttons>
             </form>
         </Card>
      );

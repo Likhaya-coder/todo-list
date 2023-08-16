@@ -2,13 +2,13 @@
     height: 80px;
     width: 100%;
     background-color: black;
-    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 50px;
 }
 
-.header h1 {
+.header h1  {
     color: white;
     text-decoration: none;
     font-size: 4em;

@@ -1,8 +1,4 @@
 .header {
-    
-} 
-
-.navigation {
     height: 80px;
     width: 100%;
     background-color: black;
@@ -12,7 +8,7 @@
     align-items: center;
 }
 
-.navigation a {
+.header h1 {
     color: white;
     text-decoration: none;
     font-size: 4em;

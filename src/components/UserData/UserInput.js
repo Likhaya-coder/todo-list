@@ -18,10 +18,10 @@ const UserInput = props => {
 
         
 
-        if (todo.trim().length < 20) {
+        if (todo.trim().length < 15) {
             setError({
                 title: "Please enter a valid task",
-                message: "The task that you provided is not valid ('note' it should be longer than 20 charecters)",
+                message: "The task that you provided is not valid ('note' it should at least be 15 charecters)",
             });
             return;
         }

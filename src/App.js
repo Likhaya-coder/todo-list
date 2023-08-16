@@ -12,11 +12,18 @@ function App() {
     });
   }
 
+  const deleteHandler = itemID => {
+    const newItemList = userItems.filter(userItem => {
+      return userItem.id !== itemID;
+    });
+    setUserItem(newItemList);
+  }
+
   return (
     <Fragment>
       <Header />
       <UserInput onAddTodo={addTodoHandler}/>
-      <TodoList userItec={userItems}/>
+      <TodoList userItems={userItems} onDelete={deleteHandler}/>
     </Fragment>
   );
 }

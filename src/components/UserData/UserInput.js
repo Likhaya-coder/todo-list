@@ -1,9 +1,9 @@
 import {Fragment, useState} from 'react';
 import Input from '../UI/Input';
 import Buttons from '../UI/Buttons';
-import classes from './UserInput.module.css';
 import successBtn from '../UI/Buttons.module.css';
 import Modal from '../UI/Modal';
+import Card from '../UI/Card';
 
 const UserInput = props => {
     const [todo, setTodo] = useState();
@@ -34,13 +34,13 @@ const UserInput = props => {
     }
 
     return ( 
-        <Fragment>
+        <Card>
             {error && <Modal onClose={modalCloseHandler} title={error.title} message={error.message}/>}
-            <form onSubmit={submitHandler} className={classes.form}>
+            <form onSubmit={submitHandler}>
                 <Input value={todo} type="text" placeholder="add item..." onChange={todoChangeHandler}/>
                 <Buttons type="submit" className={successBtn['success-button']}>Add item</Buttons>
             </form>
-        </Fragment>
+        </Card>
      );
 }
  

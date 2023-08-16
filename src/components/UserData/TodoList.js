@@ -1,17 +1,20 @@
 import Buttons from "../UI/Buttons";
 import classes from './TodoList.module.css';
 import dangerBtn from '../UI/Buttons.module.css';
+import Card from "../UI/Card";
 
 const TodoList = props => {
     return ( 
-        <ul className={classes['todos-wrapper']}>
-            {props.userItec.map(userItem => (
-                <li key={userItem.id}>
-                    <p>{userItem.input}</p>
-                    <Buttons className={dangerBtn['danger-button']}>Delete</Buttons>
-                </li>
-            ))}
-        </ul>
+        <Card>
+            <ul className={classes['todos-wrapper']}>
+                {props.userItems.map(userItem => (
+                    <li key={userItem.id}>
+                        <p>{userItem.input}</p>
+                        <Buttons onClick={() => props.onDelete(userItem.id)} className={dangerBtn['danger-button']}>Delete</Buttons>
+                    </li>
+                ))}
+            </ul>
+        </Card>
      );
 }
  
